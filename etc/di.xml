@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Translation\Model\Js\Config">
+        <arguments>
+            <argument name="patterns" xsi:type="array">
+                <item name="cs_translation_widget" xsi:type="string"><![CDATA[~\.mage\.__\((?s)[^'"]*?(['"])(.+?)(?<!\\)\1(?s).*?\)~]]></item>
+            </argument>
+        </arguments>
+    </type>
+</config>
