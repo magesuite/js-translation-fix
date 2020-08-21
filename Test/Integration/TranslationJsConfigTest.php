@@ -21,7 +21,7 @@ class TranslationJsConfigTest extends \PHPUnit\Framework\TestCase
         ];
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->config = \Magento\TestFramework\Helper\Bootstrap::getObjectManager()
             ->create(\Magento\Translation\Model\Js\Config::class);
@@ -49,7 +49,7 @@ class TranslationJsConfigTest extends \PHPUnit\Framework\TestCase
         $getPhrases = new \ReflectionMethod(\Magento\Translation\Model\Js\DataProvider::class, 'getPhrases');
         $getPhrases->setAccessible(true);
         $phrases = $getPhrases->invoke($this->phraseProvider, $code);
-        
+
         $this->assertContains($phrase, $phrases);
     }
 }
